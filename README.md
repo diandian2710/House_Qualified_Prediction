@@ -109,7 +109,7 @@
 `test[['BATHRM','HF_BATHRM','HEAT','NUM_UNITS','ROOMS','BEDRM','AYB','STORIES','STYLE','STRUCT','GRADE','CNDTN','EXTWALL','ROOF','INTWALL','KITCHENS','FIREPLACES']] = test[['ROOF','INTWALL','BATHRM','HF_BATHRM','HEAT','NUM_UNITS','ROOMS','BEDRM','AYB','STORIES','STYLE','STRUCT','GRADE','CNDTN','EXTWALL','KITCHENS','FIREPLACES']].fillna(test.median())`
 `PRICE_df_test, rfr2 = set_missing_PRICE_values(test)`  
 ***Binary***  
-binary_AC_test = set_binary(test)
+`binary_AC_test = set_binary(test)`
 ### 3.3 The processed test dataset
 `test_final = pd.concat([PRICE_df_test,binary_AC_test], axis = 1)`
 ### 3.4 Predict
