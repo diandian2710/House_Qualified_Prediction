@@ -15,16 +15,16 @@
 `train = train_data.drop(train_data.filter(regex='row ID|SSL|._D$|GIS_LAST_MOD_DTTM|SALEDATE'), axis=1)`
 ### 1.2 Scale
 ***GBA and LANDAREA Standard Deviation were too high so scale is necessary***
-`from sklearn.preprocessing import StandardScaler` 
-`scales = StandardScaler()` 
-`GBA_Values = train['GBA'].values` 
-`GBA_re = GBA_Values.reshape(-1,1)` 
-`GBA_scale_param = scales.fit(GBA_re)` 
-`train['GBA_scales'] = scales.fit_transform(GBA_re,GBA_scale_param)` 
-`LANDAREA_Values = train['LANDAREA'].values` 
-`LANDAREA_re = LANDAREA_Values.reshape(-1,1)` 
-`LANDAREA_scale_param = scales.fit(LANDAREA_re)` 
-`train['LANDAREA_scales'] = scales.fit_transform(LANDAREA_re,LANDAREA_scale_param)` 
+`from sklearn.preprocessing import StandardScaler`   
+`scales = StandardScaler()`   
+`GBA_Values = train['GBA'].values`   
+`GBA_re = GBA_Values.reshape(-1,1)`   
+`GBA_scale_param = scales.fit(GBA_re)`   
+`train['GBA_scales'] = scales.fit_transform(GBA_re,GBA_scale_param)`   
+`LANDAREA_Values = train['LANDAREA'].values`   
+`LANDAREA_re = LANDAREA_Values.reshape(-1,1)`   
+`LANDAREA_scale_param = scales.fit(LANDAREA_re)`   
+`train['LANDAREA_scales'] = scales.fit_transform(LANDAREA_re,LANDAREA_scale_param)`   
 `train = train.drop(['GBA','LANDAREA'], axis=1 )`
 ### 1.3 Missing values
 ***I also found the YR_RMDL feature has too much missing values more than 70% so I decided to drop this feature***
