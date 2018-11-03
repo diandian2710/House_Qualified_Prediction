@@ -14,7 +14,7 @@
 ***After viewing the dataset, I found some category features like GRADE and GRADE_D were same, so I would throw these overlapping feature and some noise features with the following commend***
 `train = train_data.drop(train_data.filter(regex='row ID|SSL|._D$|GIS_LAST_MOD_DTTM|SALEDATE'), axis=1)`
 ### 1.2 Scale
-***GBA and LANDAREA Standard Deviation were too high so scale is necessary***
+***GBA and LANDAREA Standard Deviation were too high so scale is necessary***  
 `from sklearn.preprocessing import StandardScaler`   
 `scales = StandardScaler()`   
 `GBA_Values = train['GBA'].values`   
