@@ -1,5 +1,7 @@
-# House _ Price _ Prediction
-# Work Flow
+# House Prediction
+## Business goal:
+Gain insight into the dataset and extract useful information related to the value of the property.
+## Work Flow
 ![workflow](_v_images/20210122221126521_278220957.png)
 ## 1 Data preprocessing
 ### 1.1 import train dataset
@@ -150,5 +152,5 @@ result.to_csv('TestingSet_Random.csv', index=False)
 ``` 
 ***I had submited the result to Kaggle and got 74% accuracy***  
 ![Alt Image Text](images/score.png "score")
-## Reflection  
+## 4. Reflection  
 In this project, there are many aspects need to be improve. For example, only Randomforest model was used in this project, however, many other model should be tried like Linear model or Tensorflow model. Another aspect is the feature selection process, many methods should be used to refine the feature selection performance. This is my first Data analysis assginment, many areas need to be corrected to improve the accuracy of the result. Any suggestions were recommended.
